@@ -1,0 +1,29 @@
+{
+  "name": "vnodehash",
+  "version": "0.0.0",
+  "description": "Consistent hashing using vnodes",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "[ -f ./node_modules/.bin/mocha ] && ./node_modules/.bin/mocha --ui exports --reporter spec --bail test/test.js || mocha --ui exports --reporter spec --bail test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mixu/fail.git"
+  },
+  "keywords": [
+    "failure",
+    "fault",
+    "detect",
+    "detector",
+    "distributed"
+  ],
+  "author": "Mikito Takada <mikito.takada@gmail.com>",
+  "license": "BSD",
+  "dependencies": { },
+  "devDependencies": {
+    "mocha": "~1.7.0"
+  }
+}
