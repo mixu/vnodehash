@@ -1,9 +1,9 @@
 var crypto = require('crypto');
 
-function Partitioner() {
+function Partitioner(max) {
   // the number Q, e.g. the maximum number of nodes
   // (e.g. the number of pieces the hash table output is split into)
-  this.maxNodes = 12;
+  this.maxNodes = max || 12;
   // the number S, e.g. the determines the current ratio of vnodes to nodes
   this.currentNodes = 0;
 
@@ -37,6 +37,9 @@ Partitioner.prototype.getNodeList = function(key, count) {
       vnode = num % this.maxNodes,
       result = [],
       self = this;
+  if(!count) {
+    count = 1;
+  }
   for(var i = 0; i < count; i++) {
     result.push(this.vnodesToNodes[ (vnode + i) % this.maxNodes ]);
   }
