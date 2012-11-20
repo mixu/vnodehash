@@ -14,10 +14,10 @@
     "url": "https://github.com/mixu/fail.git"
   },
   "keywords": [
-    "failure",
-    "fault",
-    "detect",
-    "detector",
+    "consistent",
+    "hash",
+    "distribution",
+    "hashing",
     "distributed"
   ],
   "author": "Mikito Takada <mikito.takada@gmail.com>",
