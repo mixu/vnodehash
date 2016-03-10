@@ -43,7 +43,7 @@ Consistent hashing using vnodes (fixed partition assignment):
         key = 'foo',
         vnodes = [0, 1, 2, 0, 1, 2]; // each server is assigned several vnodes
 
-        server = servers[vnodes[hash('foo') % vnodes.length]];
+        server = servers[vnodes[hash(key) % vnodes.length]];
 
 By using vnodes, the placement of partitions is decoupled from the partitioning scheme:
 
